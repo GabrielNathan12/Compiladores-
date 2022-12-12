@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/gabriel/Downloads/antlr-intellij-plugin-v4-1.19.3-3/antlr-intellij-plugin-v4/lib/antlr4-4.11.1.jar"
+    ]
+}

@@ -1,15 +1,16 @@
 grammar Gramatica;
-MAIN: 'main';
 
+MAIN: 'main';
 TIPO: 'int'| 'real' | 'string';
 AP: '(';
 FP: ')';
 
 ENTR: 'input';
 SAI: 'output';
+SAIQL: 'outputql';
 
-OP_ARI: '+'|'-'|'*'|'/';
-OP_LOG: 'and'|'or';
+OPARI: '+'|'-'|'*'|'/';
+OPLOG: 'and'|'or';
 OP: '>'| '<' | '>=' | '<=' | '=';
 
 VAR: LETRA((DIGITO|LETRA)+)?;
@@ -23,4 +24,4 @@ DEL: ';';
 fragment LETRA: [a-zA-Z];
 fragment DIGITO: [0-9];
 
-WS:[ \r\t\n]->skip;
+WS:[ \r\t\n]* ->skip;
