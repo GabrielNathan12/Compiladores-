@@ -5,15 +5,15 @@ import org.antlr.v4.runtime.Token;
 import java.io.IOException;
 public class App{
     public static void main(String[] arqs){
-        String arquivo = "\\Users\\roko\\AndroidStudioProjects\\MyApplication\\.idea\\arquivo.txt";
+        String arquivo = "arquivo.txt";
         try{
             CharStream input = CharStreams.fromFileName(arquivo);
-            gramaticaLexer lexer = new gramaticaLexer(input);
+            GramaticaLexer lexer = new GramaticaLexer(input);
             while(!lexer._hitEOF){
-                token = lexer.nextToken();
-                System.out.println("Token " + token.toString());
-                System.out.println("    lexema: " + token.getText());
-                System.out.println("    classe: " + token.getVocabulary().getDisplayName(token.getType()));
+                Token token = lexer.nextToken();
+                System.out.println("Token: "+ token.toString());
+                System.out.println("    Lexema: "+ token.getText());
+                System.out.println("    Classe: "+lexer.getVocabulary().getDisplayName(token.getType()));
             }
         }
         catch(IOException e){
